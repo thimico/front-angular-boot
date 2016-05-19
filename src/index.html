@@ -1,8 +1,13 @@
 <html>
 <head>
-    <title>Angular 2 TypeScript Gulp QuickStart</title>
+    <title>TAngular 2 TypeScript Gulp QuickStart</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Angular 2 Starter">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
     <!-- 1. Load libraries -->
     <!-- Polyfill(s) for older browsers -->
     <script src="lib/es6-shim/es6-shim.min.js"></script>
@@ -22,7 +27,42 @@
 
 <!-- 3. Display the application -->
 <body>
+
+<header class="navbar navbar-inner navbar-fixed-top">
+    <nav class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+           <!-- <img src="images/people.png" alt="logo">-->
+            <span class="app-title">Angular2 app</span>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
 <app>Loading...</app>
+    <br /><br />
+</main>
+
+<footer>
+    <div class="navbar navbar-fixed-bottom">
+        <div class="navbar-inner footer">
+            <div class="container">
+                <footer>
+                    <div class="row">
+                        <div class="col-md-12">
+                            Created by <a href="http://twitter.com/thimico" target="_blank">Thiago Menezes</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>

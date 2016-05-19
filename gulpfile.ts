@@ -77,3 +77,5 @@ gulp.task('watch', function () {
 gulp.task("build", ['compile', 'resources', 'libs'], () => {
     console.log("Building the project ...");
 });
+
+gulp.task('default', ['connect', 'watch', 'index']);
