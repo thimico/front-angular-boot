@@ -1,0 +1,13 @@
+<h1>Usuarios encontrados ({{usuarioCount}})</h1>
+<ul>
+    <li *ngFor="#usuario of usuarios" [class.selected]="usuario == selectedUsuario">
+        <a href="javascript:void(0)" (click)="select(usuario)">
+            {{usuario.id}} - {{usuario.nmUsuario}}
+            <span [ngSwitch]="usuario.isAtivo">
+                <template [ngSwitchWhen]="true">[Ativo]</template>
+                <template [ngSwitchWhen]="false">[Inativo]</template>
+            </span>
+        </a>
+    </li>
+</ul>
+<usuario *ngIf="selectedUsuario" [usuario]="selectedUsuario" (statusChanged)="calculateTodoCount()"></usuario>

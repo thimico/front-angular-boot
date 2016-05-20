@@ -1,0 +1,67 @@
+<form role="form" class="form-horizontal">
+    <div class="form-group">
+        <label id="j_idt54" class="ui-outputlabel ui-widget col-sm-2 control-label" for="nmUsuario">Nome<span
+                class="ui-outputlabel-rfi">*</span></label>
+        <div class="col-sm-5"><input id="nmUsuario" type="text" [(ngModel)]="usuario.nmUsuario" name="nmUsuario"
+                                     class="form-control input-ms" maxlength="50" title="Nome do Usuário"
+                                     [disabled]="usuario.isAtivo"/>
+        </div>
+        <label id="j_idt57" class="ui-outputlabel ui-widget col-sm-1 control-label" for="txCpf">CPF<span
+                class="ui-outputlabel-rfi">*</span></label>
+        <div class="col-sm-2"><input id="txCpf" name="txCpf" type="text" [(ngModel)]="usuario.txCpf"
+                                     title="CPF do Usuário" [disabled]="usuario.isAtivo"
+                                     class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control input-ms w6fw-ui-inputnumber"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="ui-outputlabel ui-widget col-sm-2 control-label">Nascimento<span
+                class="ui-outputlabel-rfi">*</span></label>
+        <div class="col-sm-2">
+            <input id="dtNascimento_input" name="dtNascimento_input" type="text" [(ngModel)]="usuario.dtNascimento"
+                   [disabled]="usuario.isAtivo" class="ui-inputfield ui-widget ui-state-default ui-corner-all"
+                   title="Dada de Nascimento"/>
+        </div>
+
+        <label id="j_idt64" class="ui-outputlabel ui-widget col-sm-1 control-label" for="funcaoId">Função<span
+                class="ui-outputlabel-rfi">*</span></label>
+        <div class="col-sm-2"><input id="funcaoId" type="text" [(ngModel)]="usuario.nmFuncao" name="funcaoId"
+                                     [disabled]="usuario.isAtivo" class="form-control input-ms" maxlength="100"
+                                     title="Função"/>
+        </div>
+        <label id="j_idt67" class="ui-outputlabel ui-widget col-sm-1 control-label" for="txEmail">E-mail<span
+                class="ui-outputlabel-rfi">*</span></label>
+        <div class="col-sm-3"><input id="txEmail" type="text" [(ngModel)]="usuario.txEmail" name="txEmail"
+                                     [disabled]="usuario.isAtivo" class="form-control input-ms" maxlength="50"
+                                     title="E-mail"/>
+        </div>
+
+    </div>
+
+    <div class="form-group"><label id="j_idt70" class="ui-outputlabel ui-widget col-sm-2 control-label" for="nmLogin">Login<span
+            class="ui-outputlabel-rfi">*</span></label>
+        <div class="col-sm-2"><input id="nmLogin" type="text" [(ngModel)]="usuario.nmLogin" name="nmLogin"
+                                     autocomplete="off"
+                                     [disabled]="usuario.isAtivo" class="form-control input-ms" maxlength="20"
+                                     title="Login do Usuário"/>
+        </div>
+        <label id="j_idt73" class="ui-outputlabel ui-widget col-sm-1 control-label" for="usuSenha">Senha<span
+                class="ui-outputlabel-rfi">*</span></label>
+        <div class="col-sm-2"><input id="usuSenha" name="usuSenha" type="password" [(ngModel)]="usuario.nmSenha"
+                                     [disabled]="usuario.isAtivo"
+                                     class="ui-inputfield ui-password ui-widget ui-state-default ui-corner-all form-control input-ms"
+                                     autocomplete="off" maxlength="50" title="Senha do usuário"/>
+        </div>
+    </div>
+    <div class="panel-body center">
+        <div class="col-md-12"><a id="j_idt97" class="ui-commandlink ui-widget btn btn-success" aria-label="Salvar" href="javascript:void(0)" (click)="toggleAtivo()" title="Salvar">
+            <i class="ace-icon fa fa-save bigger-110"></i> Salvar
+        </a><a id="j_idt101"  href="javascript:void(0)"  class="ui-commandlink ui-widget btn btn-warning" aria-label="Cancelar" title="Cancelar" >
+            <i class="fa-times ace-icon fa bigger-110"></i> Cancelar
+        </a>
+        </div>
+    </div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-4924789966065751498:-350522307776490061" autocomplete="off" />
+
+
+    <!--<input title="Nome" type="text" [(ngModel)]="task.name" [disabled]="task.done" />-->
+    <!--<input title="Done" type="checkbox" (click)="toggleDone()" [checked]="task.done" />-->
+</form>

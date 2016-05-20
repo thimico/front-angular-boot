@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "statusTransiente": null,
+    "dsPerfil": "Administrador",
+    "nmPerfil": "Administrador"
+  },
+  {
+    "id": 5,
+    "statusTransiente": null,
+    "dsPerfil": "Administrador",
+    "nmPerfil": "Administrador"
+  },
+  {
+    "id": 6,
+    "statusTransiente": null,
+    "dsPerfil": "Tabelião",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 7,
+    "statusTransiente": null,
+    "dsPerfil": "Subtabelião",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 8,
+    "statusTransiente": null,
+    "dsPerfil": "Gerente ",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 9,
+    "statusTransiente": null,
+    "dsPerfil": "Escrevente",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 10,
+    "statusTransiente": null,
+    "dsPerfil": "Atendente",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 11,
+    "statusTransiente": null,
+    "dsPerfil": "Tabelião",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 12,
+    "statusTransiente": null,
+    "dsPerfil": "Subtabelião",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 13,
+    "statusTransiente": null,
+    "dsPerfil": "Gerente ",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 14,
+    "statusTransiente": null,
+    "dsPerfil": "Escrevente 01",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 15,
+    "statusTransiente": null,
+    "dsPerfil": "Atendente",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 16,
+    "statusTransiente": null,
+    "dsPerfil": "Sublegal",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 17,
+    "statusTransiente": null,
+    "dsPerfil": "Escrevente 02",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 18,
+    "statusTransiente": null,
+    "dsPerfil": "Tabelião",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 19,
+    "statusTransiente": null,
+    "dsPerfil": "Subtabelião",
+    "nmPerfil": "..."
+  },
+  {
+    "id": 20,
+    "statusTransiente": null,
+    "dsPerfil": "Administrador",
+    "nmPerfil": "Administrador"
+  },
+  {
+    "id": 371,
+    "statusTransiente": null,
+    "dsPerfil": "Administrador",
+    "nmPerfil": "Administrador"
+  },
+  {
+    "id": 401,
+    "statusTransiente": null,
+    "dsPerfil": "Administrador",
+    "nmPerfil": "Administrador"
+  }
+]

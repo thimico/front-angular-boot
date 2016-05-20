@@ -1,0 +1,198 @@
+[
+  {
+    "id": 3,
+    "statusTransiente": null,
+    "dsSistema": "postgres de Distribição",
+    "dtUltValidacao": "2014-09-09",
+    "nmSistema": "Distribuição",
+    "sgSistema": "DT",
+    "txChaveValidacao": "chave",
+    "txUrl": "/distribuicao",
+    "perfis": []
+  },
+  {
+    "id": 1,
+    "statusTransiente": null,
+    "dsSistema": "Sistema de seguranca",
+    "dtUltValidacao": "2014-08-21",
+    "nmSistema": "SRN - Administração",
+    "sgSistema": "AD",
+    "txChaveValidacao": "chave1",
+    "txUrl": "/srn-adm",
+    "perfis": [
+      {
+        "id": 5,
+        "statusTransiente": null,
+        "dsPerfil": "Administrador",
+        "nmPerfil": "Administrador"
+      },
+      {
+        "id": 6,
+        "statusTransiente": null,
+        "dsPerfil": "Tabelião",
+        "nmPerfil": "..."
+      },
+      {
+        "id": 7,
+        "statusTransiente": null,
+        "dsPerfil": "Subtabelião",
+        "nmPerfil": "..."
+      },
+      {
+        "id": 8,
+        "statusTransiente": null,
+        "dsPerfil": "Gerente ",
+        "nmPerfil": "..."
+      },
+      {
+        "id": 9,
+        "statusTransiente": null,
+        "dsPerfil": "Escrevente",
+        "nmPerfil": "..."
+      },
+      {
+        "id": 10,
+        "statusTransiente": null,
+        "dsPerfil": "Atendente",
+        "nmPerfil": "..."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "statusTransiente": null,
+    "dsSistema": "Sistema Protesto",
+    "dtUltValidacao": "2014-08-28",
+    "nmSistema": "SRN - Protesto",
+    "sgSistema": "PT",
+    "txChaveValidacao": "CHAVE2",
+    "txUrl": "/srn-protesto",
+    "perfis": [
+      {
+        "id": 1,
+        "statusTransiente": null,
+        "dsPerfil": "Administrador",
+        "nmPerfil": "Administrador"
+      },
+      {
+        "id": 11,
+        "statusTransiente": null,
+        "dsPerfil": "Tabelião",
+        "nmPerfil": "..."
+      },
+      {
+        "id": 12,
+        "statusTransiente": null,
+        "dsPerfil": "Subtabelião",
+        "nmPerfil": "..."
+      },
+      {
+        "id": 13,
+        "statusTransiente": null,
+        "dsPerfil": "Gerente ",
+        "nmPerfil": "..."
+      },
+      {
+        "id": 14,
+        "statusTransiente": null,
+        "dsPerfil": "Escrevente 01",
+        "nmPerfil": "..."
+      },
+      {
+        "id": 15,
+        "statusTransiente": null,
+        "dsPerfil": "Atendente",
+        "nmPerfil": "..."
+      },
+      {
+        "id": 16,
+        "statusTransiente": null,
+        "dsPerfil": "Sublegal",
+        "nmPerfil": "..."
+      },
+      {
+        "id": 17,
+        "statusTransiente": null,
+        "dsPerfil": "Escrevente 02",
+        "nmPerfil": "..."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "statusTransiente": null,
+    "dsSistema": "Sistema de Notas",
+    "dtUltValidacao": "2014-10-03",
+    "nmSistema": "SRN - Notas",
+    "sgSistema": "NT",
+    "txChaveValidacao": "chave3",
+    "txUrl": "/srnnotas",
+    "perfis": [
+      {
+        "id": 401,
+        "statusTransiente": null,
+        "dsPerfil": "Administrador",
+        "nmPerfil": "Administrador"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "statusTransiente": null,
+    "dsSistema": "Sistema de Caixa",
+    "dtUltValidacao": "2015-04-09",
+    "nmSistema": "SRN - Caixa",
+    "sgSistema": "CX",
+    "txChaveValidacao": "chave5",
+    "txUrl": "/srncaixa",
+    "perfis": []
+  },
+  {
+    "id": 6,
+    "statusTransiente": null,
+    "dsSistema": "Sistema de Firmas",
+    "dtUltValidacao": "2015-04-09",
+    "nmSistema": "SRN - Fimas",
+    "sgSistema": "FI",
+    "txChaveValidacao": "chave6",
+    "txUrl": "/srnfirmas",
+    "perfis": [
+      {
+        "id": 18,
+        "statusTransiente": null,
+        "dsPerfil": "Tabelião",
+        "nmPerfil": "..."
+      },
+      {
+        "id": 19,
+        "statusTransiente": null,
+        "dsPerfil": "Subtabelião",
+        "nmPerfil": "..."
+      },
+      {
+        "id": 371,
+        "statusTransiente": null,
+        "dsPerfil": "Administrador",
+        "nmPerfil": "Administrador"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "statusTransiente": null,
+    "dsSistema": "Sistema de Registro de Imoveis",
+    "dtUltValidacao": "2015-12-24",
+    "nmSistema": "SRN - Ri",
+    "sgSistema": "RI",
+    "txChaveValidacao": "chave6",
+    "txUrl": "/srn-ri",
+    "perfis": [
+      {
+        "id": 20,
+        "statusTransiente": null,
+        "dsPerfil": "Administrador",
+        "nmPerfil": "Administrador"
+      }
+    ]
+  }
+]
