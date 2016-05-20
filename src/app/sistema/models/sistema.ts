@@ -1,7 +1,7 @@
 /**
  * Created by thiago.oliveira on 19/05/2016.
  */
-export class Usuario {
+export class Sistema {
 
     constructor(public id:number, public nmLogin:string, public isAtivo:boolean) {
     }

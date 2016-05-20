@@ -2,41 +2,41 @@
  * Created by thiago.oliveira on 19/05/2016.
  */
 import {Component} from "@angular/core";
-import {Usuario} from "../models/usuario";
+import {Sistema} from "../models/sistema";
 import {OnInit} from "@angular/core";
-import {UsuarioService} from "../services/usuario-service";
-import {UsuarioComponent} from "./usuario.component";
+import {SistemaService} from "../services/sistema-service";
+import {SistemaComponent} from "./sistema.component";
 
 @Component({
-    selector: 'usuario-list',
-    templateUrl: './app/usuario/components/usuario-list.html',
-    directives: [UsuarioComponent],
-    providers: [UsuarioService]
+    selector: 'sistema-list',
+    templateUrl: './app/sistema/components/sistema-list.html',
+    directives: [SistemaComponent],
+    providers: [SistemaService]
 })
-export class UsuarioListComponent implements OnInit {
+export class SistemaListComponent implements OnInit {
 
-    usuarioCount:number;
-    selectedUsuario:Usuario;
-    usuarios: any[] = [];
-    filteredUsuarios: any[] = [];
+    sistemaCount:number;
+    selectedSistema:Sistema;
+    sistemas: any[] = [];
+    filteredSistemas: any[] = [];
 
-    constructor(private _usuarioService:UsuarioService) {
-     _usuarioService.getUsuarios().subscribe((usuarios:any[])  => {
-         this.usuarios = this.filteredUsuarios = usuarios;
+    constructor(private _sistemaService:SistemaService) {
+     _sistemaService.getSistemas().subscribe((sistemas:any[])  => {
+         this.sistemas = this.filteredSistemas = sistemas;
      });
-       this.calculateUsuarioCount();
+       this.calculateSistemaCount();
     }
 
     ngOnInit() {
 
-        console.log("Usuario component initialized with " + this.usuarios.length + " usuarios.");
+        console.log("Sistema component initialized with " + this.sistemas.length + " sistemas.");
     }
 
-    calculateUsuarioCount() {
-        this.usuarioCount = this.usuarios.length;
+    calculateSistemaCount() {
+        this.sistemaCount = this.sistemas.length;
     }
 
-    select(usuario:Usuario) {
-        this.selectedUsuario = usuario;
+    select(sistema:Sistema) {
+        this.selectedSistema = sistema;
     }
 }

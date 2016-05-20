@@ -2,41 +2,48 @@
  * Created by thiago.oliveira on 19/05/2016.
  */
 import {Component} from "@angular/core";
-import {Usuario} from "../models/usuario";
+import {FormBuilder, Validators} from '@angular/common';
+import {Perfil} from "../models/perfil";
 import {OnInit} from "@angular/core";
-import {UsuarioService} from "../services/usuario-service";
-import {UsuarioComponent} from "./usuario.component";
+import {PerfilService} from "../services/perfil-service";
+import {PerfilComponent} from "./perfil.component";
+import { Observable }       from 'rxjs/Observable';
 
 @Component({
-    selector: 'usuario-list',
-    templateUrl: './app/usuario/components/usuario-list.html',
-    directives: [UsuarioComponent],
-    providers: [UsuarioService]
+    selector: 'perfil-list',
+    templateUrl: './app/perfil/components/perfil-list.html',
+    directives: [PerfilComponent],
+    providers: [PerfilService]
 })
-export class UsuarioListComponent implements OnInit {
+export class PerfilListComponent implements OnInit {
+    perfils: Observable<Perfil[]>;
+    errorMessage: string;
+    perfilCount:number;
+    selectedPerfil:Perfil;
+    // perfils: any[] = [];
+    filteredPerfils: any[] = [];
 
-    usuarioCount:number;
-    selectedUsuario:Usuario;
-    usuarios: any[] = [];
-    filteredUsuarios: any[] = [];
+    constructor(private _perfilService:PerfilService) {
 
-    constructor(private _usuarioService:UsuarioService) {
-     _usuarioService.getUsuarios().subscribe((usuarios:any[])  => {
-         this.usuarios = this.filteredUsuarios = usuarios;
-     });
-       this.calculateUsuarioCount();
     }
 
     ngOnInit() {
-
-        console.log("Usuario component initialized with " + this.usuarios.length + " usuarios.");
+        this.perfils = this._perfilService.perfils$;
+        this._perfilService.loadPerfils();
+        // this.perfils =   this.getPerfils();
+       this.calculatePerfilCount();
+        console.log("Perfil component initialized with " + this.perfils + " perfils.");
     }
 
-    calculateUsuarioCount() {
-        this.usuarioCount = this.usuarios.length;
+    calculatePerfilCount() {
+        this.perfilCount = this.perfils.toArray.length;
     }
 
-    select(usuario:Usuario) {
-        this.selectedUsuario = usuario;
+    select(perfil:Perfil) {
+        this.selectedPerfil = perfil;
+    }
+
+    deletePerfil(perfilId: number) {
+        this._perfilService.deletePerfil(perfilId);
     }
 }

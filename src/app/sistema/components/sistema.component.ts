@@ -4,20 +4,20 @@
 import {Component} from "@angular/core";
 import {Input} from "@angular/core";
 
-import {Usuario} from "../models/usuario";
+import {Sistema} from "../models/sistema";
 import {Output} from "@angular/core";
 import {EventEmitter} from "@angular/core";
 
 @Component({
-    selector: 'usuario',
-    templateUrl: './app/usuario/components/usuario.html'
+    selector: 'sistema',
+    templateUrl: './app/sistema/components/sistema.html'
 })
-export class UsuarioComponent {
-    @Input() usuario:Usuario;
+export class SistemaComponent {
+    @Input() sistema:Sistema;
     @Output() statusChanged:any = new EventEmitter<any>();
 
     toggleAtivo() {
-        this.usuario.toggleAtivo();
+        this.sistema.toggleAtivo();
         this.statusChanged.emit(null);
     }
 

@@ -20,4 +20,5 @@ export class UsuarioComponent {
         this.usuario.toggleAtivo();
         this.statusChanged.emit(null);
     }
+
 }

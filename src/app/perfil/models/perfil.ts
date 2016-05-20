@@ -1,12 +1,12 @@
 /**
  * Created by thiago.oliveira on 19/05/2016.
  */
-export class Usuario {
+export class Perfil {
 
-    constructor(public id:number, public nmLogin:string, public isAtivo:boolean) {
+    constructor(public id:number, public dsPerfil:string, public nmPerfil:string) {
     }
 
     toggleAtivo() {
-        this.isAtivo = !this.isAtivo;
+
     }
 }

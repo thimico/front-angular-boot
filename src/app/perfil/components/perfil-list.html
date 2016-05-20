@@ -1,13 +1,8 @@
-<h1>Usuarios encontrados ({{usuarioCount}})</h1>
-<ul>
-    <li *ngFor="#usuario of usuarios" [class.selected]="usuario == selectedUsuario">
-        <a href="javascript:void(0)" (click)="select(usuario)">
-            {{usuario.id}} - {{usuario.nmUsuario}}
-            <span [ngSwitch]="usuario.isAtivo">
-                <template [ngSwitchWhen]="true">[Ativo]</template>
-                <template [ngSwitchWhen]="false">[Inativo]</template>
-            </span>
-        </a>
-    </li>
-</ul>
-<usuario *ngIf="selectedUsuario" [usuario]="selectedUsuario" (statusChanged)="calculateTodoCount()"></usuario>
+<h1>Perfils encontrados ({{perfilCount}})</h1>
+<div *ngFor="let perfil of perfils | async" [class.selected]="perfil == selectedPerfil">
+    <a href="javascript:void(0)" (click)="select(perfil)">
+    {{ perfil.id }} - {{ perfil.dsPerfil }}
+    </a>
+    <button (click)="deletePerfil(perfil.id)">x</button>
+</div>
+<perfil *ngIf="selectedPerfil" [perfil]="selectedPerfil" (perfilCount)="calculatePerfilCount()"></perfil>
