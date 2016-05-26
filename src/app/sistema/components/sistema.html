@@ -14,33 +14,29 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>Nome:</label>
-                    <input type="text" class="form-control" [(ngModel)]="usuario.nmUsuario"  >
+                    <input type="text" class="form-control" [(ngModel)]="sistema.nmSistema"  >
                 </div>
                 <div class="form-group">
-                    <label>Cpf:</label>
-                    <input type="text" class="form-control" [(ngModel)]="usuario.txCpf" >
+                    <label>Descricao:</label>
+                    <input type="text" class="form-control" [(ngModel)]="sistema.dsSistema" >
                 </div>
                 <div class="form-group">
-                    <label>Login:</label>
-                    <input type="text" class="form-control" [(ngModel)]="usuario.nmLogin" >
+                    <label>Sigla:</label>
+                    <input type="text" class="form-control" [(ngModel)]="sistema.sgSistema" >
                 </div>
                  <div class="form-group">
-                    <label>Senha:</label>
-                    <input type="password" class="form-control" [(ngModel)]="usuario.nmSenha" >
+                    <label>Chave:</label>
+                    <input type="password" class="form-control" [(ngModel)]="sistema.txChaveValidacao" >
                 </div>
                  <div class="form-group">
-                    <label>E-mail:</label>
-                    <input type="email" class="form-control" [(ngModel)]="usuario.txEmail" >
+                    <label>Url:</label>
+                    <input type="text" class="form-control" [(ngModel)]="sistema.txUrl" >
                 </div>
                  <div class="form-group">
-                    <label>Dt. Nasc.</label>
-                    <input type="text" class="form-control" [(ngModel)]="usuario.dtNascimento" >
+                    <label>Dt. Validacao.</label>
+                    <input type="text" class="form-control" [(ngModel)]="sistema.dtUltValidacao" >
                 </div>
-                 <div class="form-group">
-                    <label>Funcao:</label>
-                    <input type="text" class="form-control" [(ngModel)]="usuario.nmFuncao" >
-                </div>
-                
+                 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" (click)="cancelar()" >Cancelar</button>

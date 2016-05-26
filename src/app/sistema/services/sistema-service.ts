@@ -2,14 +2,14 @@
  * Created by thiago.oliveira on 19/05/2016.
  */
 import {Injectable} from "@angular/core";
-import {Usuario} from "../models/usuario";
+import {Sistema} from "../models/sistema";
 import 'rxjs/add/operator/map';
 import { Http, Headers, RequestOptions  } from '@angular/http';
 
 @Injectable()
-export class UsuarioService {
+export class SistemaService {
 
-	private apiUrl = 'http://localhost:8080/api/private/user';  // URL para web api
+	private apiUrl = 'http://localhost:8080/api/private/sistema';  // URL para web api
 
     constructor(private http:Http) {
     }
@@ -17,7 +17,7 @@ export class UsuarioService {
    	/**
 	* Listando pessoas
 	*/
-	getUsuarios() {
+	getSistemas() {
 	 	return this.http.get(this.apiUrl)
 		 	.toPromise()
 		 	.then(response => response.json())
@@ -29,8 +29,8 @@ export class UsuarioService {
 	* @param pessoa: Array
 	* @return http POST
 	*/
-	novo(usuario: Usuario) {
-	 	let body = JSON.stringify(usuario);
+	novo(sistema: Sistema) {
+	 	let body = JSON.stringify(sistema);
 	 	let headers = new Headers({'Content-Type': 'application/json'});
 	 	let options = new RequestOptions({ headers: headers });
 	 	return this.http.post(this.apiUrl, body, options)
@@ -44,10 +44,10 @@ export class UsuarioService {
 	* @param pessoa: Array
 	* @return http PUT
 	*/
-	editar(usuario: Usuario) {
-	 	//let id = usuario.id;
-	 	//delete usuario.id;
-	 	let body = JSON.stringify(usuario);
+	editar(sistema: Sistema) {
+	 	//let id = sistema.id;
+	 	//delete sistema.id;
+	 	let body = JSON.stringify(sistema);
 	 	let headers = new Headers({ 'Content-Type': 'application/json' });
 	 	let options = new RequestOptions({ headers: headers });
 	 	let url = this.apiUrl;

@@ -4,20 +4,20 @@
 import {Component} from "@angular/core";
 import {Input} from "@angular/core";
 
-import {Usuario} from "../models/usuario";
+import {Perfil} from "../models/perfil";
 import {Output} from "@angular/core";
-import {UsuarioService} from "../services/usuario-service";
+import {PerfilService} from "../services/perfil-service";
 
 
 @Component({
-    selector: 'usuario',
-    templateUrl: './app/usuario/components/usuario.html'
+    selector: 'perfil',
+    templateUrl: './app/perfil/components/perfil.html'
 })
-export class UsuarioComponent {
-    @Input() usuario:Usuario;
+export class PerfilComponent {
+    @Input() perfil:Perfil;
 
 
-  constructor(private _usuarioService:UsuarioService) {
+  constructor(private _perfilService:PerfilService) {
 
   }
 
@@ -34,16 +34,16 @@ export class UsuarioComponent {
     * Salvar pessoa
     */
     salvar() {
-        if (this.usuario.id) {
-            this._usuarioService.editar(this.usuario).then(res => {
+        if (this.perfil.id) {
+            this._perfilService.editar(this.perfil).then(res => {
                $('#myModal').modal('hide');
             });
         }else {
-            this._usuarioService.novo(this.usuario).then(res => {
+            this._perfilService.novo(this.perfil).then(res => {
                 $('#myModal').modal('hide');
             });
         }
     }
 }
 
-    
+	

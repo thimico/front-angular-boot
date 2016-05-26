@@ -4,20 +4,20 @@
 import {Component} from "@angular/core";
 import {Input} from "@angular/core";
 
-import {Usuario} from "../models/usuario";
+import {Sistema} from "../models/sistema";
 import {Output} from "@angular/core";
-import {UsuarioService} from "../services/usuario-service";
+import {SistemaService} from "../services/sistema-service";
 
 
 @Component({
-    selector: 'usuario',
-    templateUrl: './app/usuario/components/usuario.html'
+    selector: 'sistema',
+    templateUrl: './app/sistema/components/sistema.html'
 })
-export class UsuarioComponent {
-    @Input() usuario:Usuario;
+export class SistemaComponent {
+    @Input() sistema:Sistema;
 
 
-  constructor(private _usuarioService:UsuarioService) {
+  constructor(private _sistemaService:SistemaService) {
 
   }
 
@@ -34,12 +34,12 @@ export class UsuarioComponent {
     * Salvar pessoa
     */
     salvar() {
-        if (this.usuario.id) {
-            this._usuarioService.editar(this.usuario).then(res => {
+        if (this.sistema.id) {
+            this._sistemaService.editar(this.sistema).then(res => {
                $('#myModal').modal('hide');
             });
         }else {
-            this._usuarioService.novo(this.usuario).then(res => {
+            this._sistemaService.novo(this.sistema).then(res => {
                 $('#myModal').modal('hide');
             });
         }

@@ -3,10 +3,8 @@
  */
 export class Usuario {
 
-    constructor(public id:number, public nmLogin:string, public isAtivo:boolean) {
+    constructor(public id:number, public nmLogin, nmUsuario, nmSenha, nmFuncao, txCpf, txEmail, stUsuario:string,
+    public dtNascimento:Date) {
     }
 
-    toggleAtivo() {
-        this.isAtivo = !this.isAtivo;
-    }
 }
