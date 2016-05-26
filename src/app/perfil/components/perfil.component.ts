@@ -6,7 +6,9 @@ import {Input} from "@angular/core";
 
 import {Perfil} from "../models/perfil";
 import {Output} from "@angular/core";
+
 import {PerfilService} from "../services/perfil-service";
+
 
 
 @Component({
@@ -15,6 +17,7 @@ import {PerfilService} from "../services/perfil-service";
 })
 export class PerfilComponent {
     @Input() perfil:Perfil;
+
 
 
   constructor(private _perfilService:PerfilService) {
@@ -47,3 +50,4 @@ export class PerfilComponent {
 }
 
 	
+

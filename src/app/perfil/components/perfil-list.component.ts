@@ -1,12 +1,14 @@
 /**
  * Created by thiago.oliveira on 19/05/2016.
  */
+
 import {Component, Input} from "@angular/core";
 import {Perfil} from "../models/perfil";
 import {OnInit} from "@angular/core";
 import {PerfilService} from "../services/perfil-service";
 import {PerfilComponent} from "./perfil.component";
 import { HTTP_PROVIDERS }    from '@angular/http';
+
 
 @Component({
     selector: 'perfil-list',
@@ -71,9 +73,11 @@ export class PerfilListComponent implements OnInit {
 
     calculatePerfilCount() {
         this.perfilCount = this.perfils.length;
+
     }
 
     select(perfil:Perfil) {
         this.selectedPerfil = perfil;
     }
+
 }

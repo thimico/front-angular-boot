@@ -2,6 +2,7 @@
  * Created by thiago.oliveira on 19/05/2016.
  */
 import {Injectable} from "@angular/core";
+
 import {Perfil} from "../models/perfil";
 import 'rxjs/add/operator/map';
 import { Http, Headers, RequestOptions  } from '@angular/http';

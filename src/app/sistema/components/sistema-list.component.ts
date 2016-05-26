@@ -6,6 +6,7 @@ import {Sistema} from "../models/sistema";
 import {OnInit} from "@angular/core";
 import {SistemaService} from "../services/sistema-service";
 import {SistemaComponent} from "./sistema.component";
+
 import { HTTP_PROVIDERS }    from '@angular/http';
 
 @Component({

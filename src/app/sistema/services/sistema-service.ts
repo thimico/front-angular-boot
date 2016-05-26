@@ -9,10 +9,12 @@ import { Http, Headers, RequestOptions  } from '@angular/http';
 @Injectable()
 export class SistemaService {
 
+
 	private apiUrl = 'http://localhost:8080/api/private/sistema';  // URL para web api
 
     constructor(private http:Http) {
     }
+
 
    	/**
 	* Listando pessoas

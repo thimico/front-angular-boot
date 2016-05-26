@@ -12,7 +12,8 @@ import {AboutComponent} from "./about/components/about.components";
 @Component({
     selector: "app",
     templateUrl: "./app/app.html",
-    directives: [TaskListComponent, UsuarioListComponent, AboutComponent, RouterLink, ROUTER_DIRECTIVES]
+    directives: [TaskListComponent, UsuarioListComponent, PerfilListComponent, SistemaListComponent, AboutComponent,
+        RouterLink, ROUTER_DIRECTIVES]
 })
 @RouteConfig([
     {path: '/tasks', component: TaskListComponent, as: 'TaskList'},

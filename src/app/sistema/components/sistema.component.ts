@@ -6,8 +6,8 @@ import {Input} from "@angular/core";
 
 import {Sistema} from "../models/sistema";
 import {Output} from "@angular/core";
-import {SistemaService} from "../services/sistema-service";
 
+import {SistemaService} from "../services/sistema-service";
 
 @Component({
     selector: 'sistema',
@@ -15,6 +15,7 @@ import {SistemaService} from "../services/sistema-service";
 })
 export class SistemaComponent {
     @Input() sistema:Sistema;
+
 
 
   constructor(private _sistemaService:SistemaService) {
@@ -45,5 +46,3 @@ export class SistemaComponent {
         }
     }
 }
-
-    
