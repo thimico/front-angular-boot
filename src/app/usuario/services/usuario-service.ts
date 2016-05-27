@@ -4,6 +4,7 @@
 import {Injectable} from "@angular/core";
 import {Usuario} from "../models/usuario";
 import 'rxjs/add/operator/map';
+import 'rxjs/Rx';
 import { Http, Headers, RequestOptions  } from '@angular/http';
 
 @Injectable()

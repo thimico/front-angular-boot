@@ -5,6 +5,7 @@ import {Injectable} from "@angular/core";
 
 import {Perfil} from "../models/perfil";
 import 'rxjs/add/operator/map';
+import 'rxjs/Rx';
 import { Http, Headers, RequestOptions  } from '@angular/http';
 
 @Injectable()
@@ -66,9 +67,8 @@ export class PerfilService {
 	*/
 	excluir(id: number) {
 	 	let url = this.apiUrl + '/' + id;
-	 	return this.http.delete(url)
+	 	this.http.delete(url)
 		 	.toPromise()
-		 	.then(res => res.json().data)
 		 	.catch(this.handleError);
 	}
 

@@ -1,5 +1,5 @@
 {
-  "name": "angular2-typescript-gulp",
+  "name": "front-angular-boot",
   "version": "1.0.0",
   "description": "Angular2 with TypeScript and Gulp QuickStart",
   "scripts": {
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kolorobot/angular2-typescript-gulp.git"
+    "url": "https://github.com/thimico/front-angular-boot.git"
   },
-  "author": "Rafał Borowiec",
+  "author": "Thiago Menezes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kolorobot/angular2-typescript-gulp/issues"
+    "url": "https://github.com/thimico/front-angular-boot/issues"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.1",

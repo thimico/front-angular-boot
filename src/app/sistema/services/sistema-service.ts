@@ -4,6 +4,7 @@
 import {Injectable} from "@angular/core";
 import {Sistema} from "../models/sistema";
 import 'rxjs/add/operator/map';
+import 'rxjs/Rx';
 import { Http, Headers, RequestOptions  } from '@angular/http';
 
 @Injectable()
@@ -17,7 +18,7 @@ export class SistemaService {
 
 
    	/**
-	* Listando pessoas
+	* Listando sistemas
 	*/
 	getSistemas() {
 	 	return this.http.get(this.apiUrl)
@@ -27,8 +28,21 @@ export class SistemaService {
 	}
 
 	/**
-	* Nova pessoa
-	* @param pessoa: Array
+	 * Listar sistema
+	 * @param id: number
+	 * @return http get
+	 */
+	getSistema(id: number) {
+		let url = this.apiUrl + '/' + id;
+		return this.http.get(url)
+			.toPromise()
+			.then(response => response.json())
+			.catch(this.handleError);
+	}
+
+	/**
+	* Nova sistema
+	* @param sistema: Array
 	* @return http POST
 	*/
 	novo(sistema: Sistema) {
@@ -42,8 +56,8 @@ export class SistemaService {
 	}
 
 	/**
-	* Editar pessoa
-	* @param pessoa: Array
+	* Editar sistema
+	* @param sistema: Array
 	* @return http PUT
 	*/
 	editar(sistema: Sistema) {
@@ -61,7 +75,7 @@ export class SistemaService {
 	}
 
 	/**
-	* Excluir pessoa
+	* Excluir sistema
 	* @param id: number
 	* @return http DELETE
 	*/

@@ -6,8 +6,10 @@ import {Component, Input} from "@angular/core";
 import {Perfil} from "../models/perfil";
 import {OnInit} from "@angular/core";
 import {PerfilService} from "../services/perfil-service";
+import {SistemaService} from "../../sistema/services/sistema-service";
 import {PerfilComponent} from "./perfil.component";
 import { HTTP_PROVIDERS }    from '@angular/http';
+import {Sistema} from "../../sistema/models/sistema";
 
 
 @Component({
@@ -16,6 +18,7 @@ import { HTTP_PROVIDERS }    from '@angular/http';
     directives: [PerfilComponent],
     providers: [
         PerfilService,
+        SistemaService,
         HTTP_PROVIDERS
     ]
 })
@@ -39,7 +42,7 @@ export class PerfilListComponent implements OnInit {
     */
     getPerfils() {
         this._perfilService.getPerfils()
-              .then( perfils => {this.perfils = perfils; this.perfilCount = perfils.length; } );
+              .then( perfils => {this.perfils = perfils; } );
     }
 
     /**
@@ -58,17 +61,16 @@ export class PerfilListComponent implements OnInit {
     */
     excluir(perfil:Perfil) {
         if (confirm("Você tem certeza que deseja excluir?")) {
-            this._perfilService.excluir(perfil.id).then(res => {
-                this.getPerfils();
-            });
+            this._perfilService.excluir(perfil.id)
+                .then(Router.renavigate());
         }
     }
 
     ngOnInit() {
         this.getPerfils();
-        this.perfil = new Perfil(1, "", "");
+        this.perfil = new Perfil(null, "", "", null);
         this.selectedPerfil = this.perfil;
-        console.log("Perfil component initialized with " + this.perfilCount + " perfils.");
+        console.log("Perfil component initialized with " + this.perfils.length + " perfils.");
     }
 
     calculatePerfilCount() {
@@ -78,6 +80,13 @@ export class PerfilListComponent implements OnInit {
 
     select(perfil:Perfil) {
         this.selectedPerfil = perfil;
+    }
+
+    ngOnChanges(changes) {
+        this.getPerfils();
+        this.perfil = new Perfil(null, "", "", null);
+        this.selectedPerfil = this.perfil;
+        console.log("Perfil component initialized with " + this.perfils.length + " perfils.");
     }
 
 }

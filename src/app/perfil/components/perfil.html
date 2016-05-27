@@ -15,6 +15,14 @@
                     <label>E-mail:</label>
                     <input type="email" class="form-control" [(ngModel)]="perfil.dsPerfil" >
                 </div>
+                <div class="form-group">
+                    <label>Sistema:</label>
+                   <select class="form-control" [(ngModel)]="selectedSistema" >
+                       <option *ngFor="#sistema of filteredSistemas" [ngValue]="sistema">
+                            {{ sistema.nmSistema }}
+                       </option>
+                   </select>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" (click)="cancelar()" >Cancelar</button>
