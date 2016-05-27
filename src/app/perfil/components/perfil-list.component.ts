@@ -61,8 +61,7 @@ export class PerfilListComponent implements OnInit {
     */
     excluir(perfil:Perfil) {
         if (confirm("Você tem certeza que deseja excluir?")) {
-            this._perfilService.excluir(perfil.id)
-                .then(Router.renavigate());
+            this._perfilService.excluir(perfil.id);
         }
     }
 
